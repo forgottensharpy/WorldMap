@@ -3,32 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Discord Server Info</title>
+    <title>Minecraft Map</title>
 </head>
 <body>
-    <h1>Discord Server Information</h1>
-    <div id="discord-widget">
-        <p>Loading server information...</p>
-    </div>
-    <script>
-        // Fetch the JSON data from the Discord widget API
-        fetch('https://discord.com/api/guilds/1310347344096661564/widget.json')
-            .then(response => response.json())
-            .then(data => {
-                // Create HTML content dynamically
-                const widgetDiv = document.getElementById('discord-widget');
-                widgetDiv.innerHTML = `
-                    <h2>${data.name}</h2>
-                    <p><strong>Online Members:</strong> ${data.presence_count}</p>
-                    <ul>
-                        ${data.channels.map(channel => `<li>${channel.name}</li>`).join('')}
-                    </ul>
-                `;
-            })
-            .catch(error => {
-                console.error('Error fetching Discord widget data:', error);
-                document.getElementById('discord-widget').innerHTML = '<p>Failed to load server information.</p>';
-            });
-    </script>
+    <h1>Minecraft Map coming soon.</h1>
+    <p>Join Our Discord Server while you wait for this site to be updated!</p>
+    <iframe src="https://discord.com/widget?id=1310347344096661564&theme=dark" 
+            width="350" 
+            height="500" 
+            allowtransparency="true" 
+            frameborder="0" 
+            sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts">
+    </iframe>
 </body>
 </html>
